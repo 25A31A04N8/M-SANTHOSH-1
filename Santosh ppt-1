@@ -1,0 +1,38 @@
+1 #include <stdio.h>
+2
+3 struct Item {
+4 int id;
+5 char name[20];
+6 int quantity;
+7 float price;
+8 };
+9
+10 int main() {
+11 struct Item items[10];
+12 int n, i;
+13
+14 printf("How many items? ");
+15 scanf("%d", &n);
+16
+17 / Input items
+18 for(i = 0; i < n; i +) {
+19 printf("\nEnter Item %d Details:\n", i+1);
+20 printf("ID: ");
+21 scanf("%d", &items[i].id);
+22 printf("Name: ");
+23 scanf("%s", items[i].name);
+24 printf("Quantity: ");
+25 scanf("%d", &items[i].quantity);
+26 printf("Price: ");
+27 scanf("%f", &items[i].price);
+28 }
+29
+30 / Display items
+31 printf("\n - Inventory List -\n");
+32 for(i = 0; i < n; i +) {
+33 printf("ID: %d | Name: %s | Qty: %d | Price: %.2f\n",
+34 items[i].id, items[i].name, items[i].quantity, items[i].price);
+35 }
+36
+37 return 0;
+38 }
